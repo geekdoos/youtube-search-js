@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -23,8 +22,8 @@
             <h1>Youtube Search JS</h1>
         </div>
     </div>
-    <main id="content" role="main" class="col-lg-12">
-        <div id="geekdoos-page-container"  class="row">
+    <div id="content" role="main" class="row">
+        <div id="geekdoos-page-container"  class="col-lg-6 col-lg-offset-3">
             <div class="geekdoos-content-alignment">
                 <div id="geekdoos-page-content" class="" style="overflow:hidden;">
                     <div class="container-4">
@@ -38,17 +37,18 @@
                     <div>
                         <input type="hidden" id="pageToken" value="">
                         <div class="btn-group" role="group" aria-label="..." style="display:none;">
-                            <button type="button" id="pageTokenPrev" value="" class="btn btn-default">Prev</button>
-                            <button type="button" id="pageTokenNext" value="" class="btn btn-default">Next</button>
+                            <button type="button" id="pageTokenPrev" value="" class="btn btn-primary pull-left"><< Previous</button>
+                            <button type="button" id="pageTokenNext" value="" class="btn btn-primary pull-right">Next >> </button>
                         </div>
                     </div>
                     <div id="geekdoos-watch-content" class="geekdoos-watch-main-col geekdoos-card geekdoos-card-has-padding">
+                        <h1 class="modal-header">Liste des Résultats</h1>
                         <ul id="geekdoos-watch-related" class="geekdoos-video-list"></ul>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </div>
 </body>
 </html>
