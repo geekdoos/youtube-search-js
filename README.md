@@ -22,7 +22,7 @@ Table name : resultas(id, video_id, title, link, thumnail)
 
 or
 
-Une utilisation static just en lançant le fichier **index.html** toujours avec un serveur soi nodejs ou apache.
+Une utilisation static just en lançant le fichier **index.html** toujours avec un serveur soit nodejs ou apache.
 
 **Features**
 --
