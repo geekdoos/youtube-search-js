@@ -21,7 +21,7 @@ Une utilisation static just en lançant le fichier **index.html**.
 
 -- Auto-completion
 
--- Local storage on a MySQL database
+-- Local storage using a MySQL database
 
 -- Show the result of the last request
 
