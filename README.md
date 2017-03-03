@@ -14,8 +14,20 @@ or
 
 Une utilisation static just en lançant le fichier **index.html**.
 
-**Whats inside**
+**Features**
+--
 
+-- Get the results from youtube inside your app
+
+-- Auto-completion
+
+-- Local storage on a MySQL database
+
+-- Show the result of the last request
+
+**Whats inside**
+--
+    
 -- Youtube API V3
 
 -- jQuery-ui css / js
