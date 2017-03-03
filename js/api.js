@@ -54,6 +54,15 @@ $(document).ready(function() {
             .done(function(data) {
                 var items = data.items, videoList = "";
                 $.each(items, function(index,e) {
+                    $.post( "database/save_data.php",
+                        {
+                            video_id:e.id,
+                            title:e.title,
+                            channel:e.channel,
+                        },
+                        function(data) {
+                        console.log("saved ! ");
+                    });
                     videoList = videoList + '<li class="geekdoos-video-list-item"><div class="geekdoos-content-wrapper"><a href="https://www.youtube.com/watch?v='+e.id+'" target="_blank" class="geekdoos-content-link" title="'+e.snippet.title+'"><span class="title">'+e.snippet.title+'</span><span class="stat attribution">by <span>'+e.snippet.channelTitle+'</span></span></a></div><div class="geekdoos-thumb-wrapper"><a href="" class="geekdoos-thumb-link"><span class="geekdoos-simple-thumb-wrap"><img alt="'+e.snippet.title+'" src="'+e.snippet.thumbnails.default.url+'" width="120" height="90"></span></a><span class="video-time">'+YTDurationToSeconds(e.contentDetails.duration)+'</span></div></li>';
                 });
                 $("#geekdoos-watch-related").html(videoList);
