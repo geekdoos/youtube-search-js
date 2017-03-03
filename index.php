@@ -1,3 +1,10 @@
+<?php
+    require_once 'database/Database.php';
+    $dataBase = new Database();
+    $sqlSelect = "SELECT * FROM `resultas` ORDER BY id DESC ";
+    $data = $dataBase->getQuery($sqlSelect);
+    $first_time = true;
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
 <head>
@@ -39,7 +46,25 @@
                     </div>
                     <div id="geekdoos-watch-content" class="geekdoos-watch-main-col geekdoos-card geekdoos-card-has-padding">
                         <h1 class="modal-header">Liste des Résultats</h1>
-                        <ul id="geekdoos-watch-related" class="geekdoos-video-list"></ul>
+                        <ul id="geekdoos-watch-related" class="geekdoos-video-list">
+                            <?php if ($first_time){ ?>
+                            <?php foreach($data as $d) { ?>
+                                <li class="geekdoos-video-list-item">
+                                    <div class="geekdoos-content-wrapper">
+                                        <a href="https://www.youtube.com/watch?v='<?= $d['title'] ?>'" target="_blank" class="geekdoos-content-link" title="'<?= $d['title'] ?>'">
+                                            <span class="title"><?= $d['title'] ?></span>
+                                        </a>
+                                    </div>
+                                    <div class="geekdoos-thumb-wrapper">
+                                        <a href="" class="geekdoos-thumb-link">
+                                            <span class="geekdoos-simple-thumb-wrap">
+                                                <img alt="<?= $d['title'] ?>" src="<?= $d['thumbnail'] ?>" width="120" height="90">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php $first_time = false; }}?>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -56,9 +56,7 @@ $(document).ready(function() {
                 $.each(items, function(index,e) {
                     $.post( "database/save_data.php",
                         {
-                            video_id:e.id,
-                            title:e.title,
-                            channel:e.channel,
+                            allData:e,
                         },
                         function(data) {
                         console.log("saved ! ");
