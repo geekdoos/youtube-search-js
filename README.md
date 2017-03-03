@@ -10,6 +10,16 @@ L'application développée doit persister en local -sur la machine de l'utilisat
 -----------------
 Récupéré le fichier .zip avec git clone ou bien le télécharger puis le lancé dans dans un serveur web (apache) a fin de réutilisé et l'afficher les derniers résultats qui sont persister en local avec le fichier **index.php**.
 
+**NB** le schema de la base de donnée se trouve à la racine j'ai nommé youtube.sql
+
+**database schema**
+
+Database name : youtube
+
+Table name : resultas(id, video_id, title, link, thumnail)
+
+--
+
 or
 
 Une utilisation static just en lançant le fichier **index.html**.
